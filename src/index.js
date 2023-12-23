@@ -10,7 +10,6 @@ root.render(
   <React.StrictMode>
     {/* <App /> */}
 
-    <h1 style={{ textAlign: "center" }}>React Calculator</h1>
     <Calculator />
   </React.StrictMode>
 );
