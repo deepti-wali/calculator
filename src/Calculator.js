@@ -1,5 +1,3 @@
-// Calculator.js
-// Calculator.js
 import React, { useState } from "react";
 import "./Calculator.css";
 
@@ -26,9 +24,9 @@ const Calculator = () => {
   };
 
   return (
-    <div className="calculator">
-      <input type="text" value={input} readOnly />
-      {output && <center>{output}</center>}
+    <div className="calculator" style={{ textAlign: "center" }}>
+      <input type="text" value={input} readOnly style={{}} />
+      <div className="result">{output && <p>{output}</p>}</div>
       <br />
       <div className="buttons">
         <button onClick={() => handleClick("7")}>7</button>
@@ -56,3 +54,53 @@ const Calculator = () => {
 };
 
 export default Calculator;
+
+// Calculator.js
+// import React, { useState } from "react";
+// import "./Calculator.css";
+
+// const Calculator = () => {
+//   const [input, setInput] = useState("");
+//   const [output, setOutput] = useState("");
+
+//   const handleClick = (value) => {
+//     if (input === "Error") return; // Prevent further input if an error occurred
+//     setInput((prevInput) => prevInput + value);
+//   };
+
+//   const handleReset = () => {
+//     setInput("");
+//     setOutput("");
+//   };
+
+//   const handleEvaluate = () => {
+//     try {
+//       const result = eval(input);
+//       if (isNaN(result)) {
+//         setOutput("Error");
+//       } else {
+//         setOutput(result.toString());
+//       }
+//     } catch (error) {
+//       setOutput("Error");
+//     }
+//   };
+
+//   return (
+//     <div className="calculator">
+//       <input type="text" value={input} readOnly />
+//       <div className="result">{output && <p>{output}</p>}</div>
+//       <div className="buttons">
+//         {[7, 8, 9, "+", 4, 5, 6, "*", 1, 2, 3, "-", 0, "/"].map((value) => (
+//           <button key={value} onClick={() => handleClick(value.toString())}>
+//             {value}
+//           </button>
+//         ))}
+//         <button onClick={handleReset}>C</button>
+//         <button onClick={handleEvaluate}>=</button>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Calculator;
