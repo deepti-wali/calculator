@@ -1,5 +1,5 @@
 /* Calculator.css */
-.calculator {
+/* .calculator {
   width: 300px;
   margin: 50px auto;
   border: 1px solid #ccc;
@@ -7,12 +7,12 @@
   border-radius: 5px;
 }
 
-/* input {
+input {
   width: 85%;
   margin-bottom: 10px;
   padding: 10px;
   font-size: 18px;
-} */
+}
 
 .buttons {
   display: grid;
@@ -39,4 +39,43 @@ button {
   align-items: center;
   font-size: large;
   font-weight: lighter;
+} */
+.calculator {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 50px;
+}
+
+.display {
+  margin-bottom: 10px;
+}
+
+input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  font-size: 18px;
+  text-align: right;
+}
+
+.result {
+  margin-top: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+button {
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
 }
